@@ -1,20 +1,20 @@
 class Solution {
     public List<String> fizzBuzz(int n) {
-        String[] result = new String[n];
+        List<String> answer = new ArrayList<>();
         for(int i = 1; i <= n; i++){
             if(i % 3 == 0 && i % 5 == 0){
-                result[i-1] = "FizzBuzz"; 
+                answer.add("FizzBuzz"); 
             }
             else if(i % 3 == 0){
-                result[i-1] = "Fizz"; 
+                answer.add("Fizz"); 
             }
             else if(i % 5 == 0){
-                result[i-1] = "Buzz"; 
+                answer.add("Buzz");  
             }
             else {
-                result[i-1] = Integer.toString(i);
+                answer.add(Integer.toString(i));
             }
         }
-        return Arrays.asList(result);
+        return answer;
     }
 }
