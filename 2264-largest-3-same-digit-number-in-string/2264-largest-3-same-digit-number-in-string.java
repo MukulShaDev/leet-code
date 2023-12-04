@@ -3,13 +3,9 @@ class Solution {
 
     // Check whether the 'num' string contains the 'sameDigitNumber' string or not.
     private boolean contains(String sameDigitNumber, String num) {
-        for (int index = 0; index <= num.length() - 3; ++index) {
-            if (num.charAt(index) == sameDigitNumber.charAt(0) &&
-                num.charAt(index + 1) == sameDigitNumber.charAt(1) &&
-                num.charAt(index + 2) == sameDigitNumber.charAt(2)) {
+            if (num.contains(sameDigitNumber)) {
                 return true;
             }
-        }
         return false;
     }
 
