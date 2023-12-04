@@ -1,4 +1,3 @@
-import java.util.*;
 class Solution {
     public String largestGoodInteger(String num) {
         int max = 0;
