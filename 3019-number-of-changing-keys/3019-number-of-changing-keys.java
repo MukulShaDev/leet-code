@@ -1,11 +1,9 @@
 class Solution {
     public int countKeyChanges(String s) {
+        String str = s.toLowerCase();
         int count = 0;
-        for(int i = 0; i < s.length()-1; i++){
-            char current = s.charAt(i);
-            char next = s.charAt(i+1);
-            if(current != Character.toUpperCase(next) 
-               && current != Character.toLowerCase(next)){
+        for(int i = 1; i < str.length(); i++) {
+            if(str.charAt(i) != str.charAt(i-1)) {
                 count++;
             }
         }
